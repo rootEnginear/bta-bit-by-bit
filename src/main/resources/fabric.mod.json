@@ -1,30 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "bitbybit",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Bit by Bit",
+  "description": "Eat the food bit by bit",
   "authors": [
-    "Turnip Labs"
+    "rootEnginear"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://github.com/rootEnginear/bta-bit-by-bit",
+    "sources": "https://github.com/rootEnginear/bta-bit-by-bit"
   },
-
   "license": "CC0-1.0",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+      "rootenginear.bitbybit.BitByBit"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+    "bitbybit.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.13.3"
   },
