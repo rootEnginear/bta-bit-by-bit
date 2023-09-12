@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import rootenginear.bitbybit.mixin.adapter.ItemAccessor;
+import rootenginear.bitbybit.utils.ItemFoodEatEffect;
 
 @Mixin(value = {ItemBucketIceCream.class}, remap = false)
 public class ItemBucketIceCreamOverride {
@@ -45,6 +46,7 @@ public class ItemBucketIceCreamOverride {
     @Overwrite
     public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer) {
         if (entityplayer.health < 20 && consumeFood(itemstack, entityplayer)) {
+            ItemFoodEatEffect.playEatEffect(itemstack, world, entityplayer);
             entityplayer.heal(1);
         }
         if (itemstack.stackSize == 0) return new ItemStack(Item.bucket);
