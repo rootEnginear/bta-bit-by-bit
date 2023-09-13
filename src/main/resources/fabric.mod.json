@@ -3,13 +3,15 @@
   "id": "bitbybit",
   "version": "${version}",
   "name": "Bit by Bit",
-  "description": "Eat the food bit by bit",
+  "description": "Eat foods Bit by Bit.",
   "authors": [
     "rootEnginear"
   ],
+  "icon": "icon.png",
   "contact": {
     "homepage": "https://github.com/rootEnginear/bta-bit-by-bit",
-    "sources": "https://github.com/rootEnginear/bta-bit-by-bit"
+    "sources": "https://github.com/rootEnginear/bta-bit-by-bit",
+    "issues": "https://github.com/rootEnginear/bta-bit-by-bit/issues"
   },
   "license": "CC0-1.0",
   "environment": "*",
