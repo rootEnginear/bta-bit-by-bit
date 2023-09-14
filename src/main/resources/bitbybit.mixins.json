@@ -8,6 +8,7 @@
     "ItemFoodOverride",
     "ItemFoodStackableOverride",
     "ItemSoupOverride",
+    "RenderGlobalMixin",
     "adapter.ItemAccessor"
   ],
   "client": [

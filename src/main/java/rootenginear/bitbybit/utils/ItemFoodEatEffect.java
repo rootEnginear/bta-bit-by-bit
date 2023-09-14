@@ -1,7 +1,5 @@
 package rootenginear.bitbybit.utils;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.entity.fx.EntitySlimeChunkFX;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
@@ -22,15 +20,7 @@ public class ItemFoodEatEffect {
         final double yShift = Math.sin(xRotRad) * 0.3F;
 
         for (int i = 0; i < 2; i++) {
-            Minecraft.getMinecraft(Minecraft.class).effectRenderer.addEffect(
-                    new EntitySlimeChunkFX(
-                            world,
-                            entityplayer.x - xShift,
-                            entityplayer.y - 0.2F - yShift,
-                            entityplayer.z + zShift,
-                            itemstack.getItem()
-                    )
-            );
+            world.spawnParticle("bitbybit." + itemstack.getItem().id, entityplayer.x - xShift, entityplayer.y - 0.2F - yShift, entityplayer.z + zShift, 0.0, 0.0, 0.0);
         }
 
         final float volume = ((float) (rand.nextInt(3) + 1)) / 0.5F;
