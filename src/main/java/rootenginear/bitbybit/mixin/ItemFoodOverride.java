@@ -58,7 +58,9 @@ public class ItemFoodOverride {
      */
     @Overwrite
     public int getHealAmount() {
-        int damage = Minecraft.getMinecraft(Minecraft.class).thePlayer.inventory.getCurrentItem().getItemDamageForDisplay();
+        ItemStack currentItem = Minecraft.getMinecraft(Minecraft.class).thePlayer.inventory.getCurrentItem();
+        int damage = 0;
+        if (currentItem != null) damage = currentItem.getItemDamageForDisplay();
         return healAmount - damage;
     }
 }

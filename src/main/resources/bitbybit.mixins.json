@@ -4,6 +4,7 @@
   "package": "rootenginear.bitbybit.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EntityWolfMixin",
     "ItemBucketIceCreamOverride",
     "ItemFoodOverride",
     "ItemFoodStackableOverride",
